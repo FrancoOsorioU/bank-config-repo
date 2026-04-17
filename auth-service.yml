@@ -1,0 +1,27 @@
+server:
+  port: 8085
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://admin:admin123@localhost:27017/auth-db?authSource=admin
+    redis:
+      host: localhost
+      port: 6379
+
+jwt:
+  secret: 5c37f932b2537f7bcaf700159774c748d7e1bcc372c35da906c9863116237f4a
+  expiration: 86400000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
