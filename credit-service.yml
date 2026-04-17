@@ -44,3 +44,7 @@ resilience4j:
     instances:
       default:
         timeout-duration: 2s               # ← requisito del proyecto: 2 segundos 
+kafka:
+  topics:
+    credit-card-check-request: credit-card-check-request
+    credit-card-check-response: credit-card-check-response
