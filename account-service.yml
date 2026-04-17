@@ -47,3 +47,4 @@ resilience4j:
 kafka:
   topics:
     credit-card-check-request: credit-card-check-request
+    credit-card-check-response: credit-card-check-response
