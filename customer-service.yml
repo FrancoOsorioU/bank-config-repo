@@ -31,3 +31,16 @@ springdoc:
     path: /api-docs
   swagger-ui:
     path: /swagger-ui.html
+resilience4j:
+  circuitbreaker:
+    instances:
+      default:
+        sliding-window-size: 5             # evalúa las últimas 5 llamadas
+        failure-rate-threshold: 50         # si 50% fallan → abre el circuito
+        wait-duration-in-open-state: 10s   # espera 10s antes de pasar a HALF-OPEN
+        permitted-number-of-calls-in-half-open-state: 2
+
+  timelimiter:
+    instances:
+      default:
+        timeout-duration: 2s               # ← requisito del proyecto: 2 segundos 
