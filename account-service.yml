@@ -43,4 +43,7 @@ resilience4j:
   timelimiter:
     instances:
       default:
-        timeout-duration: 2s               # ← requisito del proyecto: 2 segundos 
+        timeout-duration: 2s
+kafka:
+  topics:
+    credit-card-check-request: credit-card-check-request
