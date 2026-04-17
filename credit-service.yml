@@ -48,3 +48,5 @@ kafka:
   topics:
     credit-card-check-request: credit-card-check-request
     credit-card-check-response: credit-card-check-response
+    debt-check-request: debt-check-request  
+    debt-check-response: debt-check-response
