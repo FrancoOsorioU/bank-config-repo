@@ -50,3 +50,5 @@ kafka:
     credit-card-check-response: credit-card-check-response
     debt-check-request: debt-check-request  
     debt-check-response: debt-check-response
+    transfer-request: transfer-request
+    transfer-response: transfer-response
