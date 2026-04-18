@@ -44,3 +44,7 @@ resilience4j:
     instances:
       default:
         timeout-duration: 2s               # ← requisito del proyecto: 2 segundos 
+kafka:
+  topics:
+    transfer-request: transfer-request
+    transfer-response: transfer-response
