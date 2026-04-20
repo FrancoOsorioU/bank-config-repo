@@ -69,4 +69,5 @@ kafka:
     debt-check-response: debt-check-response
     debt-check-request: debt-check-request
     third-party-payment-response: third-party-payment-response
+    third-party-payment-request: third-party-payment-request
     yanki-payment-completed: yanki-payment-completed
