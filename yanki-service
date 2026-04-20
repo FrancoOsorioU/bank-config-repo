@@ -49,3 +49,7 @@ resilience4j:
     instances:
       default:
         timeout-duration: 2s
+kafka:
+  topics:
+    yanki-link-debit-card-request: yanki-link-debit-card-request
+    yanki-link-debit-card-response: yanki-link-debit-card-response
