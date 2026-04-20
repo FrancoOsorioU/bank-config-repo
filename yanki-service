@@ -15,13 +15,24 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
-      group-id: yanki-group
       auto-offset-reset: earliest
+      enable-auto-commit: false
+      max-poll-records: 5
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        max.poll.interval.ms: 600000
+        session.timeout.ms: 30000
+        heartbeat.interval.ms: 10000
+        request.timeout.ms: 60000
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      properties:
+        acks: all
+        retries: 3
+        delivery.timeout.ms: 120000
+        request.timeout.ms: 30000
 
 eureka:
   client:
@@ -49,6 +60,7 @@ resilience4j:
     instances:
       default:
         timeout-duration: 2s
+
 kafka:
   topics:
     yanki-link-debit-card-request: yanki-link-debit-card-request
