@@ -54,3 +54,5 @@ kafka:
     transfer-response: transfer-response
     debit-card-payment-request: debit-card-payment-request
     debit-card-payment-response: debit-card-payment-response
+    yanki-link-debit-card-request: yanki-link-debit-card-request
+    yanki-link-debit-card-response: yanki-link-debit-card-response
