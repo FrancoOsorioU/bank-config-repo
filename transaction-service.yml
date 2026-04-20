@@ -2,22 +2,37 @@ server:
   port: 8084
 
 spring:
+  application:
+    name: transaction-service
+
   data:
     mongodb:
       uri: mongodb://localhost:27017/transaction-db
     redis:
       host: localhost
       port: 6379
+
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
-      group-id: transaction-group
       auto-offset-reset: earliest
+      enable-auto-commit: false
+      max-poll-records: 5
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        max.poll.interval.ms: 600000
+        session.timeout.ms: 30000
+        heartbeat.interval.ms: 10000
+        request.timeout.ms: 60000
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      properties:
+        acks: all
+        retries: 3
+        delivery.timeout.ms: 120000
+        request.timeout.ms: 30000
 
 eureka:
   client:
@@ -31,23 +46,26 @@ springdoc:
     path: /api-docs
   swagger-ui:
     path: /swagger-ui.html
+
 resilience4j:
   circuitbreaker:
     instances:
       default:
-        sliding-window-size: 5             # evalúa las últimas 5 llamadas
-        failure-rate-threshold: 50         # si 50% fallan → abre el circuito
-        wait-duration-in-open-state: 10s   # espera 10s antes de pasar a HALF-OPEN
+        sliding-window-size: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
         permitted-number-of-calls-in-half-open-state: 2
-
   timelimiter:
     instances:
       default:
-        timeout-duration: 2s               # ← requisito del proyecto: 2 segundos 
+        timeout-duration: 2s
+
 kafka:
   topics:
     transfer-request: transfer-request
     transfer-response: transfer-response
     debit-card-payment-request: debit-card-payment-request
     debit-card-payment-response: debit-card-payment-response
+    debt-check-response: debt-check-response
+    third-party-payment-response: third-party-payment-response
     yanki-payment-completed: yanki-payment-completed
