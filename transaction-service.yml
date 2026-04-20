@@ -48,3 +48,5 @@ kafka:
   topics:
     transfer-request: transfer-request
     transfer-response: transfer-response
+    debit-card-payment-request: debit-card-payment-request
+    debit-card-payment-response: debit-card-payment-response
