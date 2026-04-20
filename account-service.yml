@@ -4,11 +4,9 @@ server:
 spring:
   application:
     name: account-service
-    
-spring:
   data:
     mongodb:
-      uri:  mongodb://localhost:27017/account-db
+      uri: mongodb://localhost:27017/account-db
     redis:
       host: localhost
       port: 6379
@@ -35,24 +33,25 @@ springdoc:
     path: /api-docs
   swagger-ui:
     path: /swagger-ui.html
+
 resilience4j:
   circuitbreaker:
     instances:
       default:
-        sliding-window-size: 5             # evalúa las últimas 5 llamadas
-        failure-rate-threshold: 50         # si 50% fallan → abre el circuito
-        wait-duration-in-open-state: 10s   # espera 10s antes de pasar a HALF-OPEN
+        sliding-window-size: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
         permitted-number-of-calls-in-half-open-state: 2
-
   timelimiter:
     instances:
       default:
         timeout-duration: 2s
+
 kafka:
   topics:
     credit-card-check-request: credit-card-check-request
     credit-card-check-response: credit-card-check-response
-    debt-check-request: debt-check-request  
+    debt-check-request: debt-check-request
     debt-check-response: debt-check-response
     transfer-request: transfer-request
     transfer-response: transfer-response
