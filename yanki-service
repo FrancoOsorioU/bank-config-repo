@@ -53,3 +53,4 @@ kafka:
   topics:
     yanki-link-debit-card-request: yanki-link-debit-card-request
     yanki-link-debit-card-response: yanki-link-debit-card-response
+    yanki-payment-completed: yanki-payment-completed
