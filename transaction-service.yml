@@ -67,5 +67,6 @@ kafka:
     debit-card-payment-request: debit-card-payment-request
     debit-card-payment-response: debit-card-payment-response
     debt-check-response: debt-check-response
+    debt-check-request: debt-check-request
     third-party-payment-response: third-party-payment-response
     yanki-payment-completed: yanki-payment-completed
