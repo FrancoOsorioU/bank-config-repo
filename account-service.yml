@@ -75,3 +75,5 @@ kafka:
     debit-card-payment-response: debit-card-payment-response
     yanki-link-debit-card-request: yanki-link-debit-card-request
     yanki-link-debit-card-response: yanki-link-debit-card-response
+    customer-validation-request: customer-validation-request
+    customer-validation-response: customer-validation-response
