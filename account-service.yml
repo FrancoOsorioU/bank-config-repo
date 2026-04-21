@@ -24,7 +24,7 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: "*"
-        spring.json.use.type.headers: false
+        spring.json.use.type.headers: true
         max.poll.interval.ms: 600000
         session.timeout.ms: 30000
         heartbeat.interval.ms: 10000
