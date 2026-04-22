@@ -80,3 +80,5 @@ kafka:
     customer-validation-request: customer-validation-request
     customer-validation-response: customer-validation-response
     account-transaction-deposit-request: account-transaction-deposit-request
+    linked-debit-card-operation-request: linked-debit-card-operation-request
+    linked-debit-card-operation-response: linked-debit-card-operation-response
