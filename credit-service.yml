@@ -68,3 +68,4 @@ kafka:
     debt-check-response: debt-check-response
     third-party-payment-request: third-party-payment-request
     third-party-payment-response: third-party-payment-response
+    customer-validation-request: customer-validation-request
