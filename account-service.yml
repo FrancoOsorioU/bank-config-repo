@@ -82,3 +82,5 @@ kafka:
     account-transaction-deposit-request: account-transaction-deposit-request
     linked-debit-card-operation-request: linked-debit-card-operation-request
     linked-debit-card-operation-response: linked-debit-card-operation-response
+    account-find-request: account-find-request
+    account-find-response: account-find-response
