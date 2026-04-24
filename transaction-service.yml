@@ -73,3 +73,4 @@ kafka:
     yanki-payment-completed: yanki-payment-completed
     account-transaction-deposit-request: account-transaction-deposit-request
     account-find-request: account-find-request
+    account-find-response: account-find-response
