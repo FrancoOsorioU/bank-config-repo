@@ -72,3 +72,6 @@ kafka:
     customer-validation-request: customer-validation-request
     customer-validation-response: customer-validation-response
     account-transaction-deposit-request: account-transaction-deposit-request
+    third-party-payment-request: third-party-payment-request
+    third-party-payment-response: third-party-payment-response
+    credit-card-check-response: credit-card-check-response
