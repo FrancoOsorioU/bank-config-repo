@@ -72,3 +72,5 @@ kafka:
     account-transaction-deposit-request: account-transaction-deposit-request
     customer-validation-request: customer-validation-request
     customer-validation-response: customer-validation-response
+    credit-debt-request: credit-debt-request
+    credit-debt-response: credit-debt-response
