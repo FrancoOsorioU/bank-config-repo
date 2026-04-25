@@ -86,3 +86,5 @@ kafka:
     account-find-response: account-find-response
     third-party-payment-request: third-party-payment-request
     third-party-payment-response: third-party-payment-response
+    credit-debt-request: credit-debt-request
+    credit-debt-response: credit-debt-response
