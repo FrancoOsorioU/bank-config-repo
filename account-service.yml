@@ -84,3 +84,5 @@ kafka:
     linked-debit-card-operation-response: linked-debit-card-operation-response
     account-find-request: account-find-request
     account-find-response: account-find-response
+    third-party-payment-request: third-party-payment-request
+    credit-card-check-response: credit-card-check-response
