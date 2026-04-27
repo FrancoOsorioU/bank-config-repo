@@ -20,29 +20,21 @@ spring:
           uri: lb://customer-service
           predicates:
             - Path=/api/customers/**
-          filters:
-            - name: JwtAuthenticationFilter
 
         - id: account-service
           uri: lb://account-service
           predicates:
             - Path=/api/accounts/**
-          filters:
-            - name: JwtAuthenticationFilter
 
         - id: credit-service
           uri: lb://credit-service
           predicates:
             - Path=/api/credits/**
-          filters:
-            - name: JwtAuthenticationFilter
 
         - id: transaction-service
           uri: lb://transaction-service
           predicates:
             - Path=/api/transactions/**
-          filters:
-            - name: JwtAuthenticationFilter
 
 eureka:
   client:
